@@ -245,20 +245,22 @@ graph LR
 This is exactly what you do for AI-Adventure assignments:
 
 ```mermaid
-graph TB
-    ORIG["Original Repo<br/>infinitethoughts7/ai-adventure"]:::orig
-    FORK["Your Fork<br/>yourname/ai-adventure"]:::fork
-    LOCAL["Your Computer<br/>Local clone"]:::local
+graph LR
+    A["STEP 1<br/>Fork the repo<br/>on GitHub"]:::step1
+    B["STEP 2<br/>Clone your fork<br/>to your laptop"]:::step2
+    C["STEP 3<br/>Add your files<br/>and commit"]:::step3
+    D["STEP 4<br/>Push to<br/>your fork"]:::step4
+    E["STEP 5<br/>Open a<br/>Pull Request"]:::step5
+    F["DONE<br/>Trainer reviews<br/>and merges"]:::step6
 
-    ORIG -->|"1. Fork<br/>on GitHub"| FORK
-    FORK -->|"2. Clone<br/>to your laptop"| LOCAL
-    LOCAL -->|"3. Push<br/>your changes"| FORK
-    FORK -->|"4. Pull Request<br/>ask to merge"| ORIG
-    ORIG -->|"5. Trainer merges"| ORIG
+    A --> B --> C --> D --> E --> F
 
-    classDef orig fill:#FF6B6B,stroke:#333,color:#fff,font-weight:bold
-    classDef fork fill:#FFD93D,stroke:#333,color:#333,font-weight:bold
-    classDef local fill:#6BCB77,stroke:#333,color:#fff,font-weight:bold
+    classDef step1 fill:#FF6B6B,stroke:#333,color:#fff,font-weight:bold
+    classDef step2 fill:#FF8C42,stroke:#333,color:#fff,font-weight:bold
+    classDef step3 fill:#FFD93D,stroke:#333,color:#333,font-weight:bold
+    classDef step4 fill:#6BCB77,stroke:#333,color:#fff,font-weight:bold
+    classDef step5 fill:#45B7D1,stroke:#333,color:#fff,font-weight:bold
+    classDef step6 fill:#845EC2,stroke:#333,color:#fff,font-weight:bold
 ```
 
 | Step | What Happens |
