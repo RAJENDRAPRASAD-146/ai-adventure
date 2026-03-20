@@ -17,11 +17,10 @@
 9. Undoing Mistakes (Very Important)
 10. Stashing & Temporary Work
 11. Logs & History
-12. Collaboration Workflow (REAL COMPANY FLOW)
-13. Advanced Concepts
-14. Best Practices (Industry Tips)
-15. Common Errors + Fixes
-16. Cheat Sheet (Final Revision)
+12. Advanced Concepts
+13. Best Practices (Industry Tips)
+14. Common Errors + Fixes
+15. Cheat Sheet (Final Revision)
 
 ---
 
@@ -410,7 +409,22 @@ git checkout feature-login
 
 * Work on features independently
 * Prevent breaking main code
+Here’s a **super concise addition for branch naming conventions** to include in your notes:
 
+---
+
+## 🌿 Branch Naming Convention (Short)
+
+| Branch Type     | Format              | Example            |
+| --------------- | ------------------- | ------------------ |
+| Feature         | `feature/<name>`    | `feature/login`    |
+| Bugfix / Hotfix | `bugfix/<name>`     | `bugfix/fix-login` |
+| Release         | `release/<version>` | `release/1.0.0`    |
+| Main / Stable   | `main` / `develop`  | `main` / `develop` |
+
+✅ **Tip:** Always branch from `develop` (or `main`) and never commit directly to `main`.
+
+---
 ### 🔹 Real-world example:
 
 * main → production code
@@ -499,40 +513,19 @@ flowchart LR
 ```
 ---
 
-### 🔹 Fork → Branch → Merge Flow (Beginner Reminder)
 
-> 💡 **Remember:** Fork → Branch → Work → Merge. Always work on a branch, never directly on `main`.
+### 🏢  Collaboration Workflow (REAL COMPANY FLOW)
 
-1. **Fork the repository** on GitHub → creates a personal copy.
-2. **Clone your fork** locally:
-
-```bash
-git clone <your-fork-url>
-```
-
-3. **Create a feature branch** to work safely:
-
-```bash
-git checkout -b feature-improvement
-```
-
-4. **Make changes** → **stage & commit**:
-
-```bash
+```text
+git pull origin main
+git checkout -b feature-name
 git add .
-git commit -m "Describe your changes"
+git commit -m "message"
+git push origin feature-name
+Create Pull Request → Review → Merge
 ```
-
-5. **Push branch** to your fork:
-
-```bash
-git push origin feature-improvement
-```
-
-6. **Create a Pull Request (PR)** on GitHub → for review.
-7. **Owner reviews & merges** → your changes integrated into the original repo.
-
 ---
+
 
 ## 🔙 9. Undoing Mistakes (Very Important)
 
@@ -667,37 +660,10 @@ git log --oneline
 
 👉 Shows commit history
 
----
-
-## 🏢 12. Collaboration Workflow (REAL COMPANY FLOW)
-
-```text
-git pull origin main
-git checkout -b feature-name
-git add .
-git commit -m "message"
-git push origin feature-name
-Create Pull Request → Review → Merge
-```
 
 ---
 
-## 🧭 Workflow Diagram
-
-```mermaid
-flowchart LR
-A[Clone Repo] --> B[Create Branch]
-B --> C[Write Code]
-C --> D[Commit]
-D --> E[Push]
-E --> F[Pull Request]
-F --> G[Code Review]
-G --> H[Merge]
-```
-
----
-
-## 🚀 13. Advanced Concepts
+## 🚀 12. Advanced Concepts
 
 ### Rebase
 
@@ -717,7 +683,7 @@ git cherry-pick <commit_id>
 
 ---
 
-## 📁 14. .gitignore
+## 📁 13. .gitignore
 
 ```text
 node_modules/
@@ -729,7 +695,7 @@ dist/
 
 ---
 
-## 🧠 15. Best Practices (Industry Tips)
+## 🧠 14. Best Practices (Industry Tips)
 
 * Never push directly to main
 * Always write meaningful commit messages
@@ -739,7 +705,7 @@ dist/
 
 ---
 
-## ⚡ 16. Common Errors + Fixes
+## ⚡ 15. Common Errors + Fixes
 
 ### Error: push rejected
 
@@ -751,7 +717,7 @@ git pull origin main --rebase
 
 ---
 
-## 📊 17. Cheat Sheet (Final Revision)
+## 📊 16. Cheat Sheet (Final Revision)
 
 | Command      | Purpose         |
 | ------------ | --------------- |
@@ -778,6 +744,5 @@ This guide helps:
 
 ## 👩‍💻 Author
 
-**Bhuvaneshwari**
+**Ryakala Bhuvaneshwari**
 
----
